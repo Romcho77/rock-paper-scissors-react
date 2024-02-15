@@ -1,0 +1,5 @@
+#triangleDiv{
+    background: url(./assets/img/bg-triangle.svg) no-repeat;
+    /* background-color: antiquewhite; */
+    background-position: 50%,50%;
+}
