@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Logo from "./assets/img/logo.svg"
 import Title from "./assets/components/title"
+import Duel from "./assets/components/duel"
 import Scissors from "./assets/img/icon-scissors.svg"
 import Rock from "./assets/img/icon-rock.svg"
 import Choice from "./assets/components/choice"
@@ -9,7 +10,7 @@ import './App.css'
 
 function App() {
 
-  const [value, setValue] = useState("0")
+  const [value, setValue] = useState(0)
 
 
   let score = 12
@@ -24,8 +25,10 @@ function App() {
         score = {score}
       />
 
-      <div id='triangleDiv' className='w-[100%] h-[80%] gap-[150px] flex flex-col pt-[75px] items-center'>
-        <div id='topTriangle' className='flex justify-center items-center h-[30%] gap-[220px]'>
+      {
+        value == 0 ?       
+        <div id='triangleDiv' className='w-[100%] h-[80%] gap-[150px] flex flex-col pt-[75px] items-center'>
+          <div id='topTriangle' className='flex justify-center items-center h-[30%] gap-[220px]'>
             <Choice 
               src = {Paper}
               color = {aqua}
@@ -34,17 +37,21 @@ function App() {
               src = {Scissors}
               color = {orange}
             />
-        </div>
-        <div>
-        <Choice 
-              src = {Rock}
-              color = {red}
-            />
-        </div>
+          </div>
+          <div>
+              <Choice 
+                    src = {Rock}
+                    color = {red}
+                  />
+          </div>
+      </div> 
+
+      : 
+        <Duel/>
+
+      }
 
 
-
-      </div>
 
 
 
