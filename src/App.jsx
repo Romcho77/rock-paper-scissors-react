@@ -53,9 +53,16 @@ function App() {
       </div> 
 
       : 
+        
+
       <div id='triangleDiv' className='w-[100%] h-[80%] gap-[150px] flex flex-col items-center'>
         <Duel
 
+              src = {(value == 1) ? Paper : (value == 2) ? Scissors : (value == 3) ? Rock : Logo}
+              color = {(value == 1) ? aqua : (value == 2) ? orange : (value == 3) ? red : red}
+              fct={setValue}
+              choix = {(value == 1) ? "paper" : (value == 2) ? "scissors" : (value == 3) ? "rock" : "zebi"}
+              value = {value}
 
         />
         </div> 
