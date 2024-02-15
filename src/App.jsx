@@ -28,7 +28,7 @@ function App() {
       {
         value == 0 ?       
         <div id='triangleDiv' className='w-[100%] h-[80%] gap-[150px] flex flex-col pt-[75px] items-center'>
-          <div id='topTriangle' className='flex justify-center items-center h-[30%] gap-[220px]'>
+          <div id='topTriangle' className='flex justify-center items-center h-[30%] gap-[200px]'>
             <Choice 
               src = {Paper}
               color = {aqua}
@@ -53,11 +53,12 @@ function App() {
       </div> 
 
       : 
+      <div id='triangleDiv' className='w-[100%] h-[80%] gap-[150px] flex flex-col items-center'>
         <Duel
 
 
         />
-
+        </div> 
       }
 
 
