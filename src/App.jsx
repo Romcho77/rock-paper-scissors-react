@@ -32,22 +32,31 @@ function App() {
             <Choice 
               src = {Paper}
               color = {aqua}
+              fct={setValue}
+              choix = {"paper"}
             />
             <Choice 
               src = {Scissors}
               color = {orange}
+              fct={setValue}
+              choix = {"scissors"}
             />
           </div>
           <div>
               <Choice 
                     src = {Rock}
                     color = {red}
+                    fct={setValue}
+                    choix = {"rock"}
                   />
           </div>
       </div> 
 
       : 
-        <Duel/>
+        <Duel
+
+
+        />
 
       }
 
