@@ -11,9 +11,9 @@ import './App.css'
 function App() {
 
   const [value, setValue] = useState(0)
-  
+  const [score, setScore] = useState(0)
 
-  let score = 0
+  
   let orange = "10px solid orange"
   let aqua = "10px solid aqua"
   let red = "10px solid red"
@@ -64,7 +64,8 @@ function App() {
               choix = {(value == 1) ? "paper" : (value == 2) ? "scissors" : (value == 3) ? "rock" : "zebi"}
               value = {value}
 
-
+              score={score}
+              setScore={setScore}
               srcHouseRock = {Rock}
               srcHousePaper = {Paper}
               srcHouseScissors = {Scissors}

@@ -11,8 +11,10 @@ export default function duel(props) {
     if(house == i){
       result = "DRAW"
     }else if (house == 2){
+        props.setScore(props.score-1)
         result = "LOSE"
     }else{
+      props.setScore(props.score+1)
       result = "WIN"
     }
   }else if (props.value == 2){
@@ -20,8 +22,10 @@ export default function duel(props) {
     if(house == i){
       result = "DRAW"
     }else if (house == 3){
+        props.setScore(props.score-1)
         result = "LOSE"
     }else{
+      props.setScore(props.score+1)
       result = "WIN"
     }
   }else if (props.value == 3){
@@ -29,8 +33,10 @@ export default function duel(props) {
     if(house == i){
       result = "DRAW"
     }else if (house == 1){
+        props.setScore(props.score-1)
         result = "LOSE"
     }else{
+      props.setScore(props.score+1)
       result = "WIN"
     }
 }

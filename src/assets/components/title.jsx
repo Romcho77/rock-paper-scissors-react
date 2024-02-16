@@ -12,7 +12,7 @@ export default function title(props) {
             <div id='right' className='h-[100%] w-[150px] bg-white rounded-xl '>
                 <div className='flex flex-col items-center pt-2'>
                     <p className='text-blue-950 font-[800] text-[15px]'>SCORE</p>
-                    <p className='text-blue-950 text-[55px] font-[800]'> {props.score} </p>
+                    <p className='text-blue-950 text-[55px] font-[800]'> {props.score}</p>
                 </div>
             </div>
 
