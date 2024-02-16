@@ -5,49 +5,57 @@ import Button from './button'
 export default function duel(props) {
   let i
   let result 
-  let house = Math.floor(Math.random()*3) + 1
+  let house 
+  let tab = ["paper","scissors","rock"]
+  let houseIndex = ( Math.floor(Math.random()*3)) + 1
+  house = tab[houseIndex]
+  console.log(house);
+
   if(props.choix=="paper"){
-    
-    if(house == i){
+    i = 1
+    if(house == props.choix){
       result = "DRAW"
-    }else if (house == 2){
-        props.setScore(props.score-1)
-        result = "LOSE"
+    }else if (house =="scissors"){
+      props.setScore(props.score-1)
+      result = "LOSE"
     }else{
       props.setScore(props.score+1)
       result = "WIN"
     }
-    i = 1
+
+    
   }else if (props.choix == "scissors"){
     
-    if(house == i){
-      result = "DRAW"
-    }else if (house == 3){
-        props.setScore(props.score-1)
-        result = "LOSE"
-    }else{
-      props.setScore(props.score+1)
-      result = "WIN"
-    }
+
     i = 2
   }else if (props.choix == "rock"){
     
-    if(house == i){
-      result = "DRAW"
-    }else if (house == 1){
-        props.setScore(props.score-1)
-        result = "LOSE"
-    }else{
-      props.setScore(props.score+1)
-      result = "WIN"
-    }
+
     i = 3
 }
 
 
 
+// if(house == 2){
+//   result = "DRAW"
+// }else if (house == 3){
+//     props.setScore(props.score-1)
+//     result = "LOSE"
+// }else{
+//   props.setScore(props.score+1)
+//   result = "WIN"
+// }
 
 
+// if(house == 3){
+//   result = "DRAW"
+// }else if (house == 1){
+//     props.setScore(props.score-1)
+//     result = "LOSE"
+// }else{
+//   props.setScore(props.score+1)
+//   result = "WIN"
+// }
 
   return (
     <div className='w-[100vw] h-[500px] bg-blue-950 z-40'>
