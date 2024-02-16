@@ -1,28 +1,53 @@
 import React from 'react'
 import Choice from "./choice"
+import Button from './button'
 
 export default function duel(props) {
   let i
+  let result 
+  let house = Math.floor(Math.random()*3) + 1
   if(props.value==1){
     i = 1
+    if(house == i){
+      result = "DRAW"
+    }else if (house == 2){
+        result = "LOSE"
+    }else{
+      result = "WIN"
+    }
   }else if (props.value == 2){
     i = 2
+    if(house == i){
+      result = "DRAW"
+    }else if (house == 3){
+        result = "LOSE"
+    }else{
+      result = "WIN"
+    }
   }else if (props.value == 3){
     i = 3
-
+    if(house == i){
+      result = "DRAW"
+    }else if (house == 1){
+        result = "LOSE"
+    }else{
+      result = "WIN"
+    }
 }
 
-let house =Math.floor(Math.random()*3) +1
+
+
+
 
 
   return (
-    <div className='w-[100%] h-[500px] bg-amber-400'>
-        <div className='flex w-[80%] justify-center relative left-[10%] gap-[500px] bg-teal-900'>
-          <p>YOU PICKED</p>
-          <p>THE HOUSE PICKED</p>
+    <div className='w-[100vw] h-[500px] bg-blue-950 z-40'>
+        <div className='flex w-[80%] pt-12 justify-center relative left-[10%] gap-[500px] '>
+          <p className='text-[30px] text-white font-bold'>YOU PICKED</p>
+          <p className='text-[30px] text-white font-bold'>THE HOUSE PICKED</p>
         </div>
 
-          <div className='bg-red-300 flex gap-[80px] justify-center items-center'>
+          <div className=' h-[70%] w-[100vw] gap-[170px] flex justify-center items-center'>
           
           {
             i==1 ?             
@@ -34,7 +59,7 @@ let house =Math.floor(Math.random()*3) +1
             />
             
             :
-            <div></div>
+            console.log("error")
 
           }
           {
@@ -47,7 +72,7 @@ let house =Math.floor(Math.random()*3) +1
             />
             
             :
-            <div></div>
+            console.log("error")
 
           }
           {
@@ -60,11 +85,21 @@ let house =Math.floor(Math.random()*3) +1
             />
             
             :
-            <div></div>
+            console.log("error")
 
           }
+            {/* MIDDLE SECTION */}
+            <div className='flex flex-col justify-center items-center'>
+              <p className='text-[55px] text-center text-white font-bold'>
+                YOU {result}
+              </p>
 
-            
+
+              <Button 
+                fct={props.fct}
+              />
+            </div>
+
           {/* RANDOM CHOICE */}
 
           {
@@ -77,7 +112,7 @@ let house =Math.floor(Math.random()*3) +1
             />
             
             :
-            <div></div>
+            console.log("error")
 
           }
           {
@@ -90,7 +125,7 @@ let house =Math.floor(Math.random()*3) +1
             />
             
             :
-            <div></div>
+            console.log("error")
 
           }
           {
@@ -103,7 +138,7 @@ let house =Math.floor(Math.random()*3) +1
             />
             
             :
-            <div></div>
+            console.log("error")
 
           }
 

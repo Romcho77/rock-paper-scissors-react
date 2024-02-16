@@ -11,9 +11,9 @@ import './App.css'
 function App() {
 
   const [value, setValue] = useState(0)
+  
 
-
-  let score = 12
+  let score = 0
   let orange = "10px solid orange"
   let aqua = "10px solid aqua"
   let red = "10px solid red"
@@ -27,7 +27,7 @@ function App() {
 
       {
         value == 0 ?       
-        <div id='triangleDiv' className='w-[100%] h-[80%] gap-[150px] flex flex-col pt-[75px] items-center'>
+        <div id='triangleDiv' className='w-[100%] h-[80%] gap-[130px] flex flex-col pt-[75px] items-center'>
           <div id='topTriangle' className='flex justify-center items-center h-[30%] gap-[200px]'>
             <Choice 
               src = {Paper}
