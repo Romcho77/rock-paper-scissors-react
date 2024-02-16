@@ -12,10 +12,18 @@ export default function duel(props) {
 
 }
 
+let house =Math.floor(Math.random()*3) +1
+
+
   return (
     <div className='w-[100%] h-[500px] bg-amber-400'>
-          <div className=' flex justify-center items-center'>
+        <div className='flex w-[80%] justify-center relative left-[10%] gap-[500px] bg-teal-900'>
+          <p>YOU PICKED</p>
+          <p>THE HOUSE PICKED</p>
+        </div>
 
+          <div className='bg-red-300 flex flex-col justify-center items-center'>
+          
           {
             i==1 ?             
             <Choice 
@@ -35,7 +43,7 @@ export default function duel(props) {
               src ={props.src}
               color ={props.color}
               fct={props.fct}
-              choix = {"paper"}
+              choix = {"scissors"}
             />
             
             :
@@ -48,6 +56,46 @@ export default function duel(props) {
               src ={props.src}
               color ={props.color}
               fct={props.fct}
+              choix = {"rock"}
+            />
+            
+            :
+            <div></div>
+
+          }
+          {/* RANDOM CHOICE */}
+          {
+            house==1 ?             
+            <Choice 
+              src ={props.src}
+              color ={props.color}
+              fct={props.fct}
+              choix = {"paper"}
+            />
+            
+            :
+            <div></div>
+
+          }
+          {
+            house==2 ?             
+            <Choice 
+              src ={props.src}
+              color ={props.color}
+              fct={props.fct}
+              choix = {"paper"}
+            />
+            
+            :
+            <div></div>
+
+          }
+          {
+            house==3 ?             
+            <Choice 
+              src ={props.src}
+              color ={props.color}
+              fct={props.fct}
               choix = {"paper"}
             />
             
@@ -57,12 +105,12 @@ export default function duel(props) {
           }
 
 
-            <Choice 
+            {/* <Choice 
               src ={props.src}
               color ={props.color}
               fct={props.fct}
               choix = {"paper"}
-            />
+            /> */}
 
           </div>
 

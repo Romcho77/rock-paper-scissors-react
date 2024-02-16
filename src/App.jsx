@@ -64,6 +64,9 @@ function App() {
               choix = {(value == 1) ? "paper" : (value == 2) ? "scissors" : (value == 3) ? "rock" : "zebi"}
               value = {value}
 
+
+              srcHouse = {}
+
         />
         </div> 
       }
