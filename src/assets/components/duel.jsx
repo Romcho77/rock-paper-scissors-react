@@ -6,8 +6,8 @@ export default function duel(props) {
   let i
   let result 
   let house = Math.floor(Math.random()*3) + 1
-  if(props.value==1){
-    i = 1
+  if(props.choix=="paper"){
+    
     if(house == i){
       result = "DRAW"
     }else if (house == 2){
@@ -17,8 +17,9 @@ export default function duel(props) {
       props.setScore(props.score+1)
       result = "WIN"
     }
-  }else if (props.value == 2){
-    i = 2
+    i = 1
+  }else if (props.choix == "scissors"){
+    
     if(house == i){
       result = "DRAW"
     }else if (house == 3){
@@ -28,8 +29,9 @@ export default function duel(props) {
       props.setScore(props.score+1)
       result = "WIN"
     }
-  }else if (props.value == 3){
-    i = 3
+    i = 2
+  }else if (props.choix == "rock"){
+    
     if(house == i){
       result = "DRAW"
     }else if (house == 1){
@@ -39,6 +41,7 @@ export default function duel(props) {
       props.setScore(props.score+1)
       result = "WIN"
     }
+    i = 3
 }
 
 
@@ -103,6 +106,8 @@ export default function duel(props) {
 
               <Button 
                 fct={props.fct}
+                score = {props.score}
+                setScore={props.setScore}
               />
             </div>
 

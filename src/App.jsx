@@ -62,7 +62,7 @@ function App() {
               color = {(value == 1) ? aqua : (value == 2) ? orange : (value == 3) ? red : red}
               fct={setValue}
               choix = {(value == 1) ? "paper" : (value == 2) ? "scissors" : (value == 3) ? "rock" : "zebi"}
-              value = {value}
+              
 
               score={score}
               setScore={setScore}
