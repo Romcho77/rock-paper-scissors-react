@@ -22,7 +22,7 @@ let house =Math.floor(Math.random()*3) +1
           <p>THE HOUSE PICKED</p>
         </div>
 
-          <div className='bg-red-300 flex flex-col justify-center items-center'>
+          <div className='bg-red-300 flex gap-[80px] justify-center items-center'>
           
           {
             i==1 ?             
@@ -63,12 +63,15 @@ let house =Math.floor(Math.random()*3) +1
             <div></div>
 
           }
+
+            
           {/* RANDOM CHOICE */}
+
           {
             house==1 ?             
             <Choice 
-              src ={props.src}
-              color ={props.color}
+              src ={props.srcHousePaper}
+              color = {"10px solid aqua"}
               fct={props.fct}
               choix = {"paper"}
             />
@@ -80,10 +83,10 @@ let house =Math.floor(Math.random()*3) +1
           {
             house==2 ?             
             <Choice 
-              src ={props.src}
-              color ={props.color}
+              src ={props.srcHouseScissors}
+              color ={"10px solid orange"}
               fct={props.fct}
-              choix = {"paper"}
+              choix = {"scissors"}
             />
             
             :
@@ -93,8 +96,8 @@ let house =Math.floor(Math.random()*3) +1
           {
             house==3 ?             
             <Choice 
-              src ={props.src}
-              color ={props.color}
+              src ={props.srcHouseRock}
+              color ={"10px solid red"}
               fct={props.fct}
               choix = {"paper"}
             />
@@ -105,12 +108,7 @@ let house =Math.floor(Math.random()*3) +1
           }
 
 
-            {/* <Choice 
-              src ={props.src}
-              color ={props.color}
-              fct={props.fct}
-              choix = {"paper"}
-            /> */}
+
 
           </div>
 

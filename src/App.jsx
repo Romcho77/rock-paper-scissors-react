@@ -65,7 +65,9 @@ function App() {
               value = {value}
 
 
-              srcHouse = {}
+              srcHouseRock = {Rock}
+              srcHousePaper = {Paper}
+              srcHouseScissors = {Scissors}
 
         />
         </div> 
